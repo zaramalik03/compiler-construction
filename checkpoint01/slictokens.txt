@@ -1,0 +1,56 @@
+#---------------------------------------------------------------------
+# Name----------Zara Malik
+# Course--------CS4223-01
+# Assignment----Checkpoint #1: List of Slic Tokens
+# Date----------January 27, 2025
+# This shows a list of all tokens in the Slic programming language,
+# each of them with a regular expression and a macro C-program name.
+#---------------------------------------------------------------------
+
+[mM][aA][iI][nN] MAIN_KW 
+[dD][aA][tT][aA] DATA_KW
+[aA][lL][gG][oO][rR][iI][tT][hH][mM] ALGORITHM_KW
+[eE][nN][dD] END_KW
+[iI][nN][tT][eE][gG][eE][rR] INTEGER_KW 
+[rR][eE][aA][lL] REAL_KW 
+[wW][h][iI][lL][eE] WHILE_KW 
+[cC][oO][uU][nN][tT][iI][nN][gG] COUNTING_KW 
+[uU][pP][wW][aA][rR][dD] UPWARD_KW 
+[dD][oO][wW][nN][wW][aA][rR][dD] DOWNWARD_KW 
+[tT][oO] TO_KW 
+[iI][fF] IF_KW 
+[eE][lL][sS][eE] ELSE_KW 
+[rR][eE][aA][dD] READ_KW 
+[pP][rR][iI][nN][tT] PRINT_KW 
+[eE][xX][iI][tT] EXIT_KW 
+; SEMICOLON 
+: COLON 
+#.*; COMMENT 
+, COMMA 
+[A-Za-z]+[A-Za-z0-9]* ID
+[+-]?[0-9]+ INTEGER_CONST
+[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+)? REAL_CONST
+\".*\" STRING_CONST
+\"([^"\n] | ("\ \"))*\" CHAR_STRING_CONST
+[ \t\v\f]+ WHITESPACE
+\r?\n NEWLINE
+:= ASSIGN
++ PLUS
+- MINUS
+* TIMES
+/ DIVIDE 
+% MODULUS 
+< LT 
+<= LE 
+> GT 
+>= GE 
+= EQ 
+<> NE 
+& AND 
+| OR 
+~ NOT 
+( LPAREN 
+) RPAREN 
+[ LBRACKET
+] RBRACKET 
+! EXCLAMATION 
